@@ -15,6 +15,8 @@ internal typealias CallIdInterceptor = (request: HttpRequestBuilder, callId: Str
 
 /**
  * A configuration for [CallId] plugin.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.callid.CallIdConfig)
  */
 public class CallIdConfig {
 
@@ -23,6 +25,9 @@ public class CallIdConfig {
 
     /**
      * If set to `true`, adds a default generator that uses current [CoroutineContext] to retrieve a call ID.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.callid.CallIdConfig.useCoroutineContext)
      *
      * @see withCallId
      * @see KtorCallIdContextElement
@@ -70,6 +75,8 @@ public class CallIdConfig {
  * and add it to the [HttpHeaders.XRequestId]. See [CallIdConfig] if you want to change it.
  *
  * You can learn more from [CallId](https://ktor.io/docs/call-id.html).
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.callid.CallId)
  */
 public val CallId: ClientPlugin<CallIdConfig> = createClientPlugin("CallId", ::CallIdConfig) {
 

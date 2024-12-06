@@ -12,11 +12,16 @@ import kotlin.reflect.*
 /**
  * Serializes a session data from and to [String].
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionSerializer)
+ *
  * @see [Sessions]
  */
 public interface SessionSerializer<T> {
     /**
      * Serializes a complex arbitrary object into a [String].
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionSerializer.serialize)
      */
     public fun serialize(session: T): String
 
@@ -28,6 +33,8 @@ public interface SessionSerializer<T> {
 
 /**
  * Creates the default [SessionSerializer] for the type [T].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.defaultSessionSerializer)
  */
 public inline fun <reified T : Any> defaultSessionSerializer(): SessionSerializer<T> =
     defaultSessionSerializer(typeOf<T>())

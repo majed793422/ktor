@@ -17,6 +17,9 @@ import io.ktor.server.application.*
  * For multi-tenant applications, you may want to use [io.ktor.server.routing.port],
  * which takes HTTP headers into consideration.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.localPort)
+ *
  * @param port the port to match against
  *
  * @throws IllegalArgumentException if the port is outside the range of TCP/UDP ports

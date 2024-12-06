@@ -11,6 +11,8 @@ import io.ktor.utils.io.*
 
 /**
  * A configuration for the [DoubleReceive] plugin.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.plugins.doublereceive.DoubleReceiveConfig)
  */
 @KtorDsl
 public class DoubleReceiveConfig {
@@ -22,6 +24,9 @@ public class DoubleReceiveConfig {
      *
      * This is useful, for example, when you want to receive a request body twice with different types or receive data
      * as a stream multiple times.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.plugins.doublereceive.DoubleReceiveConfig.cacheRawRequest)
      *
      * @see [DoubleReceive]
      */

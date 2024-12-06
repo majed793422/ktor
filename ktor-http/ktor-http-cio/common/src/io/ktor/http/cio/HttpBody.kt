@@ -10,6 +10,9 @@ import io.ktor.utils.io.*
 import io.ktor.utils.io.errors.*
 
 /**
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.cio.expectHttpUpgrade)
+ *
  * @return `true` if an http upgrade is expected according to request [method], [upgrade] header value and
  * parsed [connectionOptions]
  */

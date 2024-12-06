@@ -15,12 +15,17 @@ import kotlin.coroutines.*
 
 /**
  * Callback that can be registered to listen for upload/download progress.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.content.ProgressListener)
+ *
  * @param bytesSentTotal number of transmitted bytes.
  * @param contentLength body size. Can be null if the size is unknown.
  */
 public fun interface ProgressListener {
     /**
      * Invokes every time some data is flushed through the [ByteReadChannel].
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.content.ProgressListener.onProgress)
      */
     public suspend fun onProgress(bytesSentTotal: Long, contentLength: Long?)
 }

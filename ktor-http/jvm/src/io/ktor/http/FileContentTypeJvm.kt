@@ -9,6 +9,9 @@ import java.nio.file.*
 import kotlin.io.path.*
 
 /**
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.defaultForFile)
+ *
  * @return default content type for [file] by its extension
  */
 public fun ContentType.Companion.defaultForFile(file: File): ContentType =

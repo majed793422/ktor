@@ -33,7 +33,11 @@ internal val LIST_EMPTY: Any = Symbol("LIST_EMPTY")
 
 private val REMOVE_PREPARED: Any = Symbol("REMOVE_PREPARED")
 
-/** @suppress **This is unstable API and it is subject to change.** */
+/**
+ * @suppress **This is unstable API and it is subject to change.**
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.internal.RemoveFirstDesc)
+ */
 public typealias RemoveFirstDesc<T> = LockFreeLinkedListNode.RemoveFirstDesc<T>
 
 /** @suppress **This is unstable API and it is subject to change.** */

@@ -6,6 +6,9 @@ package io.ktor.http
 
 /**
  * Range specifier for partial content requests (RFC 2616 sec 14.35.1)
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.RangesSpecifier)
+ *
  * @property unit range units, usually bytes
  * @property ranges a list of requested ranges (could be open or closed ranges)
  */

@@ -9,6 +9,9 @@ package io.ktor.util.network
  *
  * The address will be resolved after construction.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.network.NetworkAddress)
+ *
  * @throws UnresolvedAddressException if the [hostname] cannot be resolved.
  */
 public actual abstract class NetworkAddress internal constructor(
@@ -19,6 +22,8 @@ public actual abstract class NetworkAddress internal constructor(
 
 /**
  * Network address hostname.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.network.hostname)
  */
 public actual val NetworkAddress.hostname: String
     get() = hostname

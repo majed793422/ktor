@@ -16,11 +16,16 @@ import io.ktor.websocket.*
  * Could provide bi-directional conversion implementation.
  * One of the most typical examples of the content converter is a JSON converter that provides
  * both serialization and deserialization
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.serialization.WebsocketContentConverter)
  */
 public interface WebsocketContentConverter {
     /**
      * Serializes a [value] to a WebSocket [Frame].
      * This function could throw `WebsocketConverterNotFoundException` if the value is not suitable for conversion
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.serialization.WebsocketContentConverter.serialize)
      *
      * @param charset response charset
      * @param typeInfo response body typeInfo
@@ -56,6 +61,9 @@ public interface WebsocketContentConverter {
 /**
  * Serializes a [value] to a WebSocket [Frame].
  * This function could throw `WebsocketConverterNotFoundException` if the value is not suitable for conversion
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.serialization.serialize)
  *
  * @param charset response charset
  * @param value to be converted

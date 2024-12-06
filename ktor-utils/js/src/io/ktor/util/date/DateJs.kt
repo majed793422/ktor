@@ -8,6 +8,9 @@ import kotlin.js.*
 
 /**
  * Create new gmt date from the [timestamp].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.date.GMTDate)
+ *
  * @param timestamp is a number of epoch milliseconds (it is `now` by default).
  */
 public actual fun GMTDate(timestamp: Long?): GMTDate {

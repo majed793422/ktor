@@ -9,6 +9,9 @@ package io.ktor.util.network
  *
  * The address will be resolved after construction.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.network.NetworkAddress)
+ *
  * @throws UnresolvedAddressException if the [hostname] cannot be resolved.
  */
 public expect abstract class NetworkAddress
@@ -17,6 +20,9 @@ public expect abstract class NetworkAddress
  * Represents remote endpoint with [hostname] and [port].
  *
  * The address will be resolved after construction.
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.network.NetworkAddress)
  *
  * @throws UnresolvedAddressException if the [hostname] cannot be resolved.
  */

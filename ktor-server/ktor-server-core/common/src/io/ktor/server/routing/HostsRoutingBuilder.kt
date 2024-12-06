@@ -15,6 +15,9 @@ import io.ktor.server.plugins.*
  * When passes, it puts a request host and port into
  * call parameters by the [HostRouteSelector.HostNameParameter] and [HostRouteSelector.PortParameter] keys.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.host)
+ *
  * @param host exact host name that is treated literally
  * @param port to be tested or `0` to pass all ports
  */

@@ -15,6 +15,9 @@ private const val MIN_QUALITY = -Double.MAX_VALUE
 
 /**
  * Represents a context in which routing resolution is being performed
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveContext)
+ *
  * @param routing root node for resolution to start at
  * @param call instance of [PipelineCall] to use during resolution
  */
@@ -25,6 +28,8 @@ public class RoutingResolveContext(
 ) {
     /**
      * List of path segments parsed out of a [call]
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveContext.segments)
      */
     public val segments: List<String>
 

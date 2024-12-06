@@ -13,6 +13,9 @@ import java.security.*
 
 /**
  * A `digest` [Authentication] provider.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.auth.DigestAuthenticationProvider)
+ *
  * @property realm specifies the value to be passed in the `WWW-Authenticate` header.
  * @property algorithmName a message digest algorithm to be used. Usually only `MD5` is supported by clients.
  */
@@ -136,6 +139,8 @@ public class DigestAuthenticationProvider internal constructor(
 /**
  * Provides a message digest for the specified username and realm or returns `null` if a user is missing.
  * This function could fetch digest from a database or compute it instead.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.auth.DigestProviderFunction)
  */
 public typealias DigestProviderFunction = suspend (userName: String, realm: String) -> ByteArray?
 

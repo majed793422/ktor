@@ -23,16 +23,23 @@ internal val LOGGER = KtorSimpleLogger("io.ktor.client.plugins.websocket.WebSock
 
 /**
  * Indicates if a client engine supports WebSockets.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.websocket.WebSocketCapability)
  */
 public data object WebSocketCapability : HttpClientEngineCapability<Unit>
 
 /**
  * Indicates if a client engine supports extensions for WebSocket plugin.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.websocket.WebSocketExtensionsCapability)
  */
 public data object WebSocketExtensionsCapability : HttpClientEngineCapability<Unit>
 
 /**
  * Client WebSocket plugin.
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.websocket.WebSockets)
  *
  * @property pingIntervalMillis - interval between [FrameType.PING] messages.
  * @property maxFrameSize - max size of a single websocket frame.
@@ -47,6 +54,9 @@ public class WebSockets internal constructor(
 ) {
     /**
      * Client WebSocket plugin.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.websocket.WebSockets.WebSockets)
      *
      * @property pingIntervalMillis - interval between [FrameType.PING] messages.
      * @property maxFrameSize - max size of a single websocket frame.

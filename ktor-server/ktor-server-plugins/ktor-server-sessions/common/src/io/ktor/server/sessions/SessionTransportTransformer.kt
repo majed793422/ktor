@@ -6,10 +6,15 @@ package io.ktor.server.sessions
 
 /**
  * A transformer used to sign and encrypt session data.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionTransportTransformer)
  */
 public interface SessionTransportTransformer {
     /**
      * Untransforms a [transportValue] that represents a transformed session.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionTransportTransformer.transformRead)
      *
      * @return Untransformed value or null
      */
@@ -26,6 +31,9 @@ public interface SessionTransportTransformer {
 /**
  * Un-applies a list of session transformations to a [cookieValue] representing a transformed session string.
  * If any of the unapplication of transformations fail returning a null, this function also returns null.
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.transformRead)
  *
  * @return A string representing the original session contents.
  */

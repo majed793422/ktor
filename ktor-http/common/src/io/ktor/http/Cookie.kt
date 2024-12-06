@@ -13,6 +13,9 @@ import kotlin.jvm.*
  * Represents a cookie with name, content and a set of settings such as expiration, visibility and security.
  * A cookie with neither [expires] nor [maxAge] is a session cookie.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.Cookie)
+ *
  * @property name
  * @property value
  * @property encoding - cookie encoding type [CookieEncoding]
@@ -41,25 +44,35 @@ public data class Cookie(
 
 /**
  * Cooke encoding strategy
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.CookieEncoding)
  */
 public enum class CookieEncoding {
     /**
      * No encoding (could be dangerous)
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.CookieEncoding.RAW)
      */
     RAW,
 
     /**
      * Double quotes with slash-escaping
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.CookieEncoding.DQUOTES)
      */
     DQUOTES,
 
     /**
      * URI encoding
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.CookieEncoding.URI_ENCODING)
      */
     URI_ENCODING,
 
     /**
      * BASE64 encoding
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.CookieEncoding.BASE64_ENCODING)
      */
     BASE64_ENCODING
 }
@@ -68,6 +81,8 @@ private val loweredPartNames = setOf("max-age", "expires", "domain", "path", "se
 
 /**
  * Parse server's `Set-Cookie` header value
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.parseServerSetCookieHeader)
  */
 public fun parseServerSetCookieHeader(cookiesHeader: String): Cookie {
     val asMap = parseClientCookiesHeader(cookiesHeader, false)

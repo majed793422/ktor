@@ -6,10 +6,15 @@ package io.ktor.server.config
 
 /**
  * Represents an application config node
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.ApplicationConfig)
  */
 public interface ApplicationConfig {
     /**
      * Get config property with [path] or fail
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.ApplicationConfig.property)
+     *
      * @throws ApplicationConfigurationException
      */
     public fun property(path: String): ApplicationConfigValue
@@ -50,10 +55,14 @@ public interface ApplicationConfig {
 
 /**
  * Represents an application config value
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.ApplicationConfigValue)
  */
 public interface ApplicationConfigValue {
     /**
      * Get property string value
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.ApplicationConfigValue.getString)
      */
     public fun getString(): String
 
@@ -65,6 +74,8 @@ public interface ApplicationConfigValue {
 
 /**
  * Thrown when an application is misconfigured
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.ApplicationConfigurationException)
  */
 public class ApplicationConfigurationException(message: String, cause: Throwable?) : Exception(message, cause) {
     public constructor(message: String) : this(message, null)
@@ -72,6 +83,9 @@ public class ApplicationConfigurationException(message: String, cause: Throwable
 
 /**
  * Try read String value from [ApplicationConfig].
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.config.tryGetString)
  *
  * @return null if key is missing
  */

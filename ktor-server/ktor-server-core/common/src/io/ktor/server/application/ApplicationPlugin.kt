@@ -13,6 +13,9 @@ import kotlinx.coroutines.*
 
 /**
  * Defines an installable [Plugin](https://ktor.io/docs/plugins.html).
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.Plugin)
+ *
  * @param TPipeline is the type of the pipeline this plugin is compatible with
  * @param TConfiguration is the configuration object type for this Plugin
  * @param TPlugin is the instance type of the Plugin object
@@ -25,6 +28,8 @@ public interface Plugin<
     > {
     /**
      * A unique key that identifies a plugin.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.Plugin.key)
      */
     public val key: AttributeKey<TPlugin>
 
@@ -36,6 +41,9 @@ public interface Plugin<
 
 /**
  * Defines a [Plugin](https://ktor.io/docs/plugins.html) that is installed into Application.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.BaseApplicationPlugin)
+ *
  * @param TPipeline is the type of the pipeline this plugin is compatible with
  * @param TConfiguration is the configuration object type for this Plugin
  * @param TPlugin is the instance type of the Plugin object
@@ -48,6 +56,9 @@ public interface BaseApplicationPlugin<
 
 /**
  * Defines a [Plugin](https://ktor.io/docs/plugins.html) that is installed into Application.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.ApplicationPlugin)
+ *
  * @param TConfiguration is the configuration object type for this Plugin
  */
 public interface ApplicationPlugin<out TConfiguration : Any> :
@@ -57,6 +68,8 @@ internal val pluginRegistryKey = AttributeKey<Attributes>("ApplicationPluginRegi
 
 /**
  * Returns the existing plugin registry or registers and returns a new one.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.pluginRegistry)
  */
 public val <A : Pipeline<*, PipelineCall>> A.pluginRegistry: Attributes
     get() = attributes.computeIfAbsent(pluginRegistryKey) { Attributes(true) }

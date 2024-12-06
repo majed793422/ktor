@@ -18,6 +18,9 @@ import io.ktor.websocket.*
  * Frames sent after a Close frame are silently ignored.
  * Note that a Close frame could be sent automatically in reply to a peer's Close frame unless it is a raw WebSocket session.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.serialization.sendSerializedBase)
+ *
  * @param data The data to serialize
  * @param converter The WebSocket converter
  * @param charset Response charset

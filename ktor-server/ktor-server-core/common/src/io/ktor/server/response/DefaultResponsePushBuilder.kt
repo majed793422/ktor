@@ -12,6 +12,9 @@ import io.ktor.utils.io.*
 
 /**
  * An HTTP/2 push builder.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.DefaultResponsePushBuilder)
+ *
  * @property method HTTP method
  * @property url builder
  * @property headers builder

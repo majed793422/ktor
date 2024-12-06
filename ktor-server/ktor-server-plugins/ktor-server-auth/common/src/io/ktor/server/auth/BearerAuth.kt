@@ -11,6 +11,9 @@ import io.ktor.server.response.*
 /**
  * A Bearer [Authentication] provider.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.auth.BearerAuthenticationProvider)
+ *
  * @see [bearer]
  */
 public class BearerAuthenticationProvider internal constructor(config: Config) : AuthenticationProvider(config) {
@@ -100,6 +103,8 @@ public class BearerAuthenticationProvider internal constructor(config: Config) :
  * Installs the Bearer [Authentication] provider.
  * Bearer auth requires the developer to provide a custom 'authenticate' function to authorize the token,
  * and return the associated principal.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.auth.bearer)
  */
 public fun AuthenticationConfig.bearer(
     name: String? = null,

@@ -13,6 +13,9 @@ import java.util.*
 
 /**
  * Loads all implementations of the service [T] using [ServiceLoader.load].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.reflect.loadServices)
+ *
  * @see loadServiceOrNull
  */
 @InternalAPI

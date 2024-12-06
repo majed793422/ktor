@@ -17,6 +17,9 @@ private val escapeRegex: Regex = "\\\\.".toRegex()
 
 /**
  * Parses an authorization header [headerValue] into a [HttpAuthHeader].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.auth.parseAuthorizationHeader)
+ *
  * @return [HttpAuthHeader] or `null` if argument string is blank.
  * @throws [ParseException] on invalid header
  *

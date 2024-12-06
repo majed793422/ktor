@@ -12,6 +12,9 @@ import kotlin.reflect.*
  * Returns the corresponding session ID for the type [SessionType] or `null` if no session provided.
  * It will crash if no session provider for type [SessionType] installed or no [Sessions] plugin installed.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.sessionId)
+ *
  * @param SessionType to search ID for
  * @return session id or `null` if no session ID sent by the client
  */

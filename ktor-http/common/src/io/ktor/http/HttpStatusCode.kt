@@ -6,6 +6,9 @@ package io.ktor.http
 
 /**
  * Represents an HTTP status code and description.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.HttpStatusCode)
+ *
  * @param value is a numeric code.
  * @param description is free form description of a status.
  */
@@ -180,5 +183,7 @@ internal fun allStatusCodes(): List<HttpStatusCode> = listOf(
  * Checks if a given status code is a success code according to HTTP standards.
  *
  * Codes from 200 to 299 are considered to be successful.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.isSuccess)
  */
 public fun HttpStatusCode.isSuccess(): Boolean = value in (200 until 300)

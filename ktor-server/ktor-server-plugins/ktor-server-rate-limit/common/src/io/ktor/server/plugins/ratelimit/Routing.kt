@@ -10,6 +10,9 @@ import io.ktor.util.*
 /**
  * Creates a route with Rate-Limit rules applied to it.
  * This function accepts name of RateLimit providers defined in the [RateLimit] plugin configuration.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.plugins.ratelimit.rateLimit)
+ *
  * @see [RateLimit]
  *
  * @param configuration names of RateLimit providers defined in the [RateLimit] plugin configuration.

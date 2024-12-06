@@ -16,11 +16,16 @@ import java.util.concurrent.*
 
 /**
  * A configuration for the [DropwizardMetrics] plugin.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.metrics.dropwizard.DropwizardMetricsConfig)
  */
 @KtorDsl
 public class DropwizardMetricsConfig {
     /**
      * Specifies the base name (prefix) of Ktor metrics used for monitoring HTTP requests.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.metrics.dropwizard.DropwizardMetricsConfig.baseName)
+     *
      * @see [DropwizardMetrics]
      */
     public var baseName: String = name("ktor.calls")
@@ -44,6 +49,8 @@ public class DropwizardMetricsConfig {
  * useful information about the server and incoming requests.
  *
  * You can learn more from [Dropwizard metrics](https://ktor.io/docs/dropwizard-metrics.html).
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.metrics.dropwizard.DropwizardMetrics)
  */
 public val DropwizardMetrics: ApplicationPlugin<DropwizardMetricsConfig> =
     createApplicationPlugin("DropwizardMetrics", ::DropwizardMetricsConfig) {

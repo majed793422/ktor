@@ -9,11 +9,16 @@ import io.ktor.util.date.*
 
 /**
  * Server's response cookies.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.ResponseCookies)
+ *
  * @see [ApplicationResponse.cookies]
  */
 public class ResponseCookies(private val response: PipelineResponse) {
     /**
      * Gets a cookie from a response's `Set-Cookie` header.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.ResponseCookies.get)
      */
     public operator fun get(name: String): Cookie? = response.headers
         .values("Set-Cookie")

@@ -20,12 +20,17 @@ private val RECEIVE_TYPE_KEY: AttributeKey<TypeInfo> = AttributeKey("ReceiveType
 
 /**
  * A single act of communication between a client and server.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.ApplicationCall)
+ *
  * @see [io.ktor.server.request.ApplicationRequest]
  * @see [io.ktor.server.response.ApplicationResponse]
  */
 public interface ApplicationCall : CoroutineScope {
     /**
      * [Attributes] attached to this call.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.ApplicationCall.attributes)
      */
     public val attributes: Attributes
 
@@ -66,6 +71,9 @@ public interface ApplicationCall : CoroutineScope {
 
 /**
  * A single act of communication between a client and server.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.PipelineCall)
+ *
  * @see [io.ktor.server.request.PipelineRequest]
  * @see [io.ktor.server.response.PipelineResponse]
  */
@@ -73,6 +81,8 @@ public interface PipelineCall : ApplicationCall {
 
     /**
      * An [PipelineRequest] that is a client request.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.PipelineCall.request)
      */
     public override val request: PipelineRequest
 
@@ -109,6 +119,8 @@ public interface PipelineCall : ApplicationCall {
 
 /**
  * Indicates if a response is sent.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.isHandled)
  */
 public val ApplicationCall.isHandled: Boolean get() = response.isCommitted
 

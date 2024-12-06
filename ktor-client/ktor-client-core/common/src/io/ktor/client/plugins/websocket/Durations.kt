@@ -11,6 +11,9 @@ import kotlin.time.Duration.Companion.milliseconds
 /**
  * Client WebSocket plugin.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.websocket.WebSockets)
+ *
  * @param pingInterval - interval between [FrameType.PING] messages.
  * @param maxFrameSize - max size of a single websocket frame.
  */

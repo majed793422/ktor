@@ -7,6 +7,9 @@ package io.ktor.http
 /**
  * Represents an immutable URL
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.Url)
+ *
  * @property protocol
  * @property host name without port (domain)
  * @property port the specified port or protocol default port
@@ -227,6 +230,8 @@ public class Url internal constructor(
 
 /**
  * [Url] authority.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.authority)
  */
 public val Url.authority: String
     get() = buildString {

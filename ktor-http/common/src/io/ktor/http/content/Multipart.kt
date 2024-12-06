@@ -12,12 +12,18 @@ import kotlinx.coroutines.flow.*
 
 /**
  * Represents a multipart/form-data entry. Could be a [FormItem] or [FileItem].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData)
+ *
  * @property dispose to be invoked when this part is no longed needed
  * @property headers of this part, could be inaccurate on some engines
  */
 public sealed class PartData(public val dispose: () -> Unit, public val headers: Headers) {
     /**
      * Represents a multipart form item.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.FormItem)
+     *
      * @property value of this field
      */
     public class FormItem(public val value: String, dispose: () -> Unit, partHeaders: Headers) :
@@ -25,6 +31,9 @@ public sealed class PartData(public val dispose: () -> Unit, public val headers:
 
     /**
      * Represents a file item.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.FileItem)
+     *
      * @property provider of content bytes
      */
 
@@ -35,12 +44,17 @@ public sealed class PartData(public val dispose: () -> Unit, public val headers:
     ) : PartData(dispose, partHeaders) {
         /**
          * Original file name if present
+         *
+         * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.FileItem.originalFileName)
          */
         public val originalFileName: String? = contentDisposition?.parameter(ContentDisposition.Parameters.FileName)
     }
 
     /**
      * Represents a binary item.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.BinaryItem)
+     *
      * @property provider of content bytes
      */
 
@@ -52,6 +66,9 @@ public sealed class PartData(public val dispose: () -> Unit, public val headers:
 
     /**
      * Represents a binary part with a provider that supplies [ByteReadChannel].
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.BinaryChannelItem)
+     *
      * @property provider supplies a channel to read data from
      */
     public class BinaryChannelItem(
@@ -61,6 +78,8 @@ public sealed class PartData(public val dispose: () -> Unit, public val headers:
 
     /**
      * Parsed `Content-Disposition` header or `null` if missing.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.PartData.contentDisposition)
      */
     public val contentDisposition: ContentDisposition? by lazy(LazyThreadSafetyMode.NONE) {
         headers[HttpHeaders.ContentDisposition]?.let { ContentDisposition.parse(it) }
@@ -85,10 +104,14 @@ public sealed class PartData(public val dispose: () -> Unit, public val headers:
 
 /**
  * Represents a multipart data stream that could be received from a call.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.MultiPartData)
  */
 public interface MultiPartData {
     /**
      * Reads next part data or `null` if the end of multipart stream encountered.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.MultiPartData.readPart)
      */
     public suspend fun readPart(): PartData?
 
@@ -104,6 +127,9 @@ public interface MultiPartData {
 
 /**
  * Transforms the multipart data stream into a [Flow] of [PartData].
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.content.asFlow)
  *
  * @return a [Flow] emitting each part of the multipart data until the end of the stream.
  */

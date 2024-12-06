@@ -14,6 +14,9 @@ import kotlin.coroutines.*
  * Represents an embedded server that hosts an application.
  * It's an entry point to the application and handles the lifecycle of the application engine.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.EmbeddedServer)
+ *
  * @param TEngine The type of the application engine used by the server.
  * @param TConfiguration The type of the configuration used by the engine.
  */
@@ -24,6 +27,8 @@ public expect class EmbeddedServer<TEngine : ApplicationEngine, TConfiguration :
 ) {
     /**
      * Provides events on Application lifecycle
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.EmbeddedServer.monitor)
      */
     public val monitor: Events
 
@@ -42,6 +47,8 @@ public expect class EmbeddedServer<TEngine : ApplicationEngine, TConfiguration :
 
 /**
  * Factory interface for creating [ApplicationEngine] instances.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.ApplicationEngineFactory)
  */
 public interface ApplicationEngineFactory<
     out TEngine : ApplicationEngine,
@@ -64,6 +71,8 @@ public interface ApplicationEngineFactory<
 
 /**
  * Creates an embedded server with the given [factory], listening on [host]:[port].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.embeddedServer)
  */
 @OptIn(DelicateCoroutinesApi::class)
 public fun <TEngine : ApplicationEngine, TConfiguration : ApplicationEngine.Configuration> embeddedServer(

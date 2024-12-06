@@ -17,6 +17,8 @@ import io.ktor.utils.io.*
 
 /**
  * An utility class used to build a [ClientPlugin] instance.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.api.ClientPluginBuilder)
  **/
 @KtorDsl
 public class ClientPluginBuilder<PluginConfig : Any> internal constructor(
@@ -39,6 +41,9 @@ public class ClientPluginBuilder<PluginConfig : Any> internal constructor(
      *
      * This block is invoked for every [HttpClient.request] call.
      * There you can modify the request in a way you want: add headers, configure logging, etc.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.api.ClientPluginBuilder.onRequest)
      *
      * @see [createClientPlugin]
      *

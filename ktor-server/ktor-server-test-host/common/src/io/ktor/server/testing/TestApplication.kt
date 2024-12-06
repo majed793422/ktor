@@ -22,11 +22,16 @@ import kotlin.coroutines.*
 
 /**
  * A client attached to [TestApplication].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.ClientProvider)
  */
 @KtorDsl
 public interface ClientProvider {
     /**
      * Returns a client with the default configuration.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.ClientProvider.client)
+     *
      * @see [testApplication]
      */
     public val client: HttpClient
@@ -51,6 +56,9 @@ public interface ClientProvider {
 
 /**
  * A configured instance of a test application running locally.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplication)
+ *
  * @see [testApplication]
  */
 public class TestApplication internal constructor(
@@ -69,6 +77,8 @@ public class TestApplication internal constructor(
 
     /**
      * Starts this [TestApplication] instance.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplication.start)
      */
     public suspend fun start() {
         if (state.compareAndSet(State.Created, State.Starting)) {
@@ -99,6 +109,9 @@ public class TestApplication internal constructor(
 /**
  * Creates an instance of [TestApplication] configured with the builder [block].
  * Make sure to call [TestApplication.stop] after your tests.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplication)
+ *
  * @see [testApplication]
  */
 @KtorDsl

@@ -15,10 +15,14 @@ import io.ktor.websocket.serialization.*
 
 /**
  * Represents a server-side web socket session
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.websocket.WebSocketServerSession)
  */
 public interface WebSocketServerSession : WebSocketSession {
     /**
      * Associated received [call] that originating this session
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.websocket.WebSocketServerSession.call)
      */
     public val call: ApplicationCall
 }
@@ -26,12 +30,17 @@ public interface WebSocketServerSession : WebSocketSession {
 /**
  * Represents a server-side web socket session with all default implementations
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.websocket.DefaultWebSocketServerSession)
+ *
  * @see DefaultWebSocketSession
  */
 public interface DefaultWebSocketServerSession : DefaultWebSocketSession, WebSocketServerSession
 
 /**
  * An application that started this web socket session
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.websocket.application)
  */
 public val WebSocketServerSession.application: Application get() = call.application
 

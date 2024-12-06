@@ -29,6 +29,9 @@ import io.ktor.http.*
  * [HttpClient.get], [HttpClient.post], [HttpClient.put], and [HttpClient.delete], which are often more
  * convenient for common HTTP methods.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.request.request)
+ *
  * @param builder The [HttpRequestBuilder] used to configure request parameters. Defaults to an empty
  * builder if none is provided.
  * @return [HttpResponse] The response received from the server after executing the request.

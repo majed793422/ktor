@@ -14,6 +14,9 @@ import kotlinx.io.*
 
 /**
  * Hash algorithms
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.HashAlgorithm)
+ *
  * @property code numeric hash algorithm code
  * @property openSSLName is a name used in openssl for this algorithm
  */
@@ -32,6 +35,9 @@ public enum class HashAlgorithm(public val code: Byte, public val openSSLName: S
     public companion object {
         /**
          * Find hash algorithm instance by its numeric [code]
+         *
+         * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.HashAlgorithm.Companion.byCode)
+         *
          * @throws TLSExtension if no hash algorithm found by code
          */
         public fun byCode(code: Byte): HashAlgorithm = entries.find { it.code == code }
@@ -41,6 +47,9 @@ public enum class HashAlgorithm(public val code: Byte, public val openSSLName: S
 
 /**
  * Signature algorithms
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.SignatureAlgorithm)
+ *
  * @property code numeric algorithm codes
  */
 
@@ -56,6 +65,9 @@ public enum class SignatureAlgorithm(public val code: Byte) {
     public companion object {
         /**
          * Find signature algorithm instance by its numeric [code]
+         *
+         * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.SignatureAlgorithm.Companion.byCode)
+         *
          * @throws TLSExtension if no hash algorithm found by code
          */
         public fun byCode(code: Byte): SignatureAlgorithm? = entries.find { it.code == code }
@@ -65,6 +77,9 @@ public enum class SignatureAlgorithm(public val code: Byte) {
 /**
  * Hash and signature algorithm pair
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.HashAndSign)
+ *
  * @property hash algorithm.
  * @property sign algorithm.
  * @property oid [object identifier](https://en.wikipedia.org/wiki/Object_identifier).
@@ -73,6 +88,8 @@ public enum class SignatureAlgorithm(public val code: Byte) {
 public data class HashAndSign(val hash: HashAlgorithm, val sign: SignatureAlgorithm, val oid: OID? = null) {
     /**
      * String representation of this algorithms pair
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.HashAndSign.name)
      */
     val name: String = "${hash.name}with${sign.name}"
 
@@ -90,6 +107,8 @@ internal fun HashAndSign(hashValue: Byte, signValue: Byte, oidValue: String? = n
 
 /**
  * List of supported combinations of hash and signature algorithms
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.network.tls.extensions.SupportedSignatureAlgorithms)
  */
 
 public val SupportedSignatureAlgorithms: List<HashAndSign> = listOf(

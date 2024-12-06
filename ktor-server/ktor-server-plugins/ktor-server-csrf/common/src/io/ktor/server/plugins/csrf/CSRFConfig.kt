@@ -11,6 +11,8 @@ import io.ktor.utils.io.*
 
 /**
  * A configuration for the [io.ktor.server.plugins.csrf.CSRF] plugin.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.plugins.csrf.CSRFConfig)
  */
 @KtorDsl
 public class CSRFConfig {
@@ -22,6 +24,9 @@ public class CSRFConfig {
     /**
      * All incoming requests must have an "Origin" header matching one of the hosts
      * defined using this method.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.plugins.csrf.CSRFConfig.allowOrigin)
      *
      * @param origin expected "Origin" header, revealing the URL of the site leading up
      *               to the path (e.g. https://google.com)

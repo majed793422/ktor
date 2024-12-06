@@ -14,6 +14,9 @@ import kotlin.jvm.*
 
 /**
  * Builds a route to match the specified [path].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.route)
+ *
  * @see [Application.routing]
  */
 @KtorDsl

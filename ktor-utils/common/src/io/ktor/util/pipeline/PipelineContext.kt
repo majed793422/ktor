@@ -13,6 +13,9 @@ internal expect val DISABLE_SFG: Boolean
 /**
  * Represents running execution of a pipeline
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.pipeline.PipelineContext)
+ *
  * @param context: object representing context in which pipeline executes
  */
 @KtorDsl
@@ -22,6 +25,8 @@ public abstract class PipelineContext<TSubject : Any, TContext : Any>(
 
     /**
      * Subject of this pipeline execution that goes along the pipeline
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.pipeline.PipelineContext.subject)
      */
     public abstract var subject: TSubject
 

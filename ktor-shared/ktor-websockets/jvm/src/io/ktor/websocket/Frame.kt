@@ -12,6 +12,9 @@ import java.nio.*
 
 /**
  * A frame received or ready to be sent. It is not reusable and not thread-safe
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.Frame)
+ *
  * @property fin is it final fragment, should be always `true` for control frames and if no fragmentation is used
  * @property frameType enum value
  * @property data - a frame content or fragment content
@@ -29,6 +32,8 @@ public actual sealed class Frame actual constructor(
 ) {
     /**
      * Frame content
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.Frame.buffer)
      */
     public val buffer: ByteBuffer = ByteBuffer.wrap(data)
 

@@ -9,6 +9,9 @@ import kotlin.jvm.*
 
 /**
  * A WebSocket close reason.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.CloseReason)
+ *
  * @property code - close reason code as per RFC 6455, recommended to be one of [CloseReason.Codes]
  * @property message - a close reason message, could be empty
  */

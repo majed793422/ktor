@@ -8,6 +8,9 @@ import io.ktor.http.cio.internals.*
 
 /**
  * Represents a parsed `Connection` header
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.cio.ConnectionOptions)
+ *
  * @property close `true` for `Connection: close`
  * @property keepAlive `true` for `Connection: keep-alive`
  * @property upgrade `true` for `Connection: upgrade`
@@ -22,6 +25,8 @@ public class ConnectionOptions(
     public companion object {
         /**
          * An instance for `Connection: close`
+         *
+         * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.cio.ConnectionOptions.Companion.Close)
          */
         public val Close: ConnectionOptions = ConnectionOptions(close = true)
 

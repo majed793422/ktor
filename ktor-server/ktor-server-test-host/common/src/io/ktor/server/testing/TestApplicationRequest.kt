@@ -13,6 +13,9 @@ import kotlinx.coroutines.*
 /**
  * A test application request
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplicationRequest)
+ *
  * @property method HTTP method to be sent or executed
  * @property uri HTTP url to sent request to or was sent to
  * @property version HTTP version to sent or executed

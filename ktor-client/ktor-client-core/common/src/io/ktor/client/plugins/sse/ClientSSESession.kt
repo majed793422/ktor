@@ -11,16 +11,23 @@ import kotlinx.coroutines.flow.*
 
 /**
  * A Server-sent events session.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.sse.SSESession)
  */
 public interface SSESession : CoroutineScope {
     /**
      * An incoming server-sent events flow.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.sse.SSESession.incoming)
      */
     public val incoming: Flow<ServerSentEvent>
 }
 
 /**
  * A client Server-sent events session.
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.plugins.sse.ClientSSESession)
  *
  * @property call associated with session.
  */

@@ -6,6 +6,9 @@ package io.ktor.server.engine
 
 /**
  * Represents a type of a connector, e.g HTTP or HTTPS.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.ConnectorType)
+ *
  * @param name name of the connector.
  *
  * Some engines can support other connector types, hence not a enum.
@@ -14,6 +17,8 @@ public data class ConnectorType(val name: String) {
     public companion object {
         /**
          * Non-secure HTTP connector.
+         *
+         * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.ConnectorType.Companion.HTTP)
          */
         public val HTTP: ConnectorType = ConnectorType("HTTP")
 
@@ -26,10 +31,14 @@ public data class ConnectorType(val name: String) {
 
 /**
  * Represents a connector configuration.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.EngineConnectorConfig)
  */
 public interface EngineConnectorConfig {
     /**
      * Type of the connector, e.g HTTP or HTTPS.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.EngineConnectorConfig.type)
      */
     public val type: ConnectorType
 
@@ -46,6 +55,8 @@ public interface EngineConnectorConfig {
 
 /**
  * Adds a non-secure connector to this engine environment
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.engine.connector)
  */
 public inline fun ApplicationEngine.Configuration.connector(builder: EngineConnectorBuilder.() -> Unit) {
     connectors.add(EngineConnectorBuilder().apply(builder))

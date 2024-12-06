@@ -13,6 +13,9 @@ import java.security.*
 
 /**
  * Create a digest function with the specified [algorithm] and [salt] provider.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.getDigestFunction)
+ *
  * @param algorithm digest algorithm name
  * @param salt a function computing a salt for a particular hash input value
  */

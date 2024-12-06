@@ -12,6 +12,9 @@ import io.ktor.server.routing.*
  * Adds a route to handle Server-Sent Events (SSE) at the specified [path] using the provided [handler].
  * Requires [SSE] plugin to be installed.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sse.sse)
+ *
  * @param path URL path at which to handle SSE requests.
  * @param handler function that defines the behavior of the SSE session. It is invoked when a client connects to the SSE
  * endpoint. Inside the handler, you can use the functions provided by [ServerSSESession]

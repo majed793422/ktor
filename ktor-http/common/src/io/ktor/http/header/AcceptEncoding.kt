@@ -9,6 +9,9 @@ import io.ktor.http.*
 /**
  * Represents the `Accept-Encoding` HTTP header, which specifies the content encoding the client is willing to accept.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.header.AcceptEncoding)
+ *
  * @property acceptEncoding The encoding type as a string, such as "gzip", "compress", "br", etc.
  * @param parameters Optional list of parameters associated with the encoding, such as quality values (q-values).
  */
@@ -19,6 +22,9 @@ public class AcceptEncoding(
 
     /**
      * Constructs an `AcceptEncoding` instance with a specified encoding type and q-value.
+     *
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.header.AcceptEncoding.AcceptEncoding)
      *
      * @param acceptEncoding The encoding type, such as "gzip", "compress", "br", etc.
      * @param qValue The quality value (q-value) associated with this encoding.

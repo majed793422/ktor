@@ -21,6 +21,9 @@ import kotlin.reflect.*
 /**
  * A pair of a [request] and [response] for a specific [HttpClient].
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.call.HttpClientCall)
+ *
  * @property client the client that executed the call.
  */
 public open class HttpClientCall(
@@ -127,6 +130,9 @@ public open class HttpClientCall(
 
 /**
  * Tries to receive the payload of the [response] as a specific type [T].
+ *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.client.call.body)
  *
  * @throws NoTransformationFoundException If no transformation is found for the type [T].
  * @throws DoubleReceiveException If already called [body].

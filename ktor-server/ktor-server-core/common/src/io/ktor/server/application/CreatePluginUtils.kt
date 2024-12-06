@@ -25,6 +25,9 @@ import io.ktor.util.pipeline.*
  *
  * You can learn more from [Custom plugins](https://ktor.io/docs/custom-plugins.html).
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.application.createApplicationPlugin)
+ *
  * @param name A name of a plugin that is used to get its instance.
  * @param configurationPath is path in configuration file to configuration of this plugin.
  * @param createConfiguration Defines how the initial [PluginConfigT] of your new plugin can be created.

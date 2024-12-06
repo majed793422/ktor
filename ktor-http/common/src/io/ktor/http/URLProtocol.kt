@@ -8,6 +8,9 @@ import io.ktor.util.*
 
 /**
  * Represents URL protocol
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.URLProtocol)
+ *
  * @property name of protocol (schema)
  * @property defaultPort default port for protocol or `-1` if not known
  */
@@ -59,6 +62,8 @@ public data class URLProtocol(val name: String, val defaultPort: Int) {
 
 /**
  * Check if the protocol is websocket
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.http.isWebsocket)
  */
 public fun URLProtocol.isWebsocket(): Boolean = name == "ws" || name == "wss"
 

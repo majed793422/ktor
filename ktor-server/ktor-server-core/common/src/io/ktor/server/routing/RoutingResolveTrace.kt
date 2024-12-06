@@ -8,6 +8,9 @@ import io.ktor.server.application.*
 
 /**
  * Represents a single entry in the [RoutingResolveTrace].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveTraceEntry)
+ *
  * @param route specifies instance of [RoutingNode] for this entry.
  * @param segmentIndex specifies index in [RoutingResolveTrace.segments] for this entry.
  * @param result specifies resolution result for this entry.
@@ -24,6 +27,8 @@ public open class RoutingResolveTraceEntry(
 
     /**
      * Appends a child to this entry
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveTraceEntry.append)
      */
     public fun append(item: RoutingResolveTraceEntry) {
         val items = children ?: mutableListOf<RoutingResolveTraceEntry>().also { children = it }
@@ -43,6 +48,9 @@ public open class RoutingResolveTraceEntry(
 
 /**
  * Represents the trace of routing resolution process for diagnostics.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveTrace)
+ *
  * @param call instance of [PipelineCall] for which this trace was created.
  * @param segments list of [String]s for each path segment supplied for the routing resolution.
  */
@@ -62,6 +70,8 @@ public class RoutingResolveTrace(public val call: PipelineCall, public val segme
 
     /**
      * Begins processing a [route] at segment with [segmentIndex] in [segments].
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.routing.RoutingResolveTrace.begin)
      */
     public fun begin(route: RoutingNode, segmentIndex: Int) {
         stack.push(RoutingResolveTraceEntry(route, segmentIndex))

@@ -11,6 +11,9 @@ import java.nio.charset.*
 /**
  * Moves bytes from `this` buffer to the [destination] buffer
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.moveTo)
+ *
  * @param destination is the buffer to copy bytes to
  * @param limit is an optional parameter specifying maximum number of bytes to be moved
  * @return number of bytes moved

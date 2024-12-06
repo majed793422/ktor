@@ -17,6 +17,9 @@ import kotlin.coroutines.*
 
 /**
  * A test call response received from a server.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplicationResponse)
+ *
  * @property readResponse if response channel need to be consumed into byteContent
  */
 public class TestApplicationResponse(
@@ -31,6 +34,8 @@ public class TestApplicationResponse(
 
     /**
      * Response body byte content. Could be blocking. Remains `null` until response appears.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.testing.TestApplicationResponse.byteContent)
      */
     public var byteContent: ByteArray?
         get() = when {

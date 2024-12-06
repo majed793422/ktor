@@ -8,12 +8,17 @@ import io.ktor.server.application.*
 
 /**
  * SessionTracker provides the ability to track and extract session from the call context.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionTracker)
  */
 public interface SessionTracker<S : Any> {
     /**
      * Load session value from [transport] string for the specified [call]
      *
      * It is recommended to perform lookup asynchronously if there is an external session store
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.sessions.SessionTracker.load)
+     *
      * @return session instance or null if session was not found
      */
     public suspend fun load(call: ApplicationCall, transport: String?): S?

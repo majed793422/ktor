@@ -29,6 +29,9 @@ internal val LOGGER = KtorSimpleLogger("io.ktor.server.websocket.WebSockets")
  * }
  * ```
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.websocket.WebSockets)
+ *
  * @param pingIntervalMillis duration between pings or [PINGER_DISABLED] to disable pings.
  * @param timeoutMillis write/ping timeout after that a connection will be closed.
  * @param maxFrameSize maximum frame that could be received or sent.

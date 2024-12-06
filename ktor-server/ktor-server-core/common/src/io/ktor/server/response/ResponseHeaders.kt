@@ -8,6 +8,9 @@ import io.ktor.http.*
 
 /**
  * Server's response headers.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.ResponseHeaders)
+ *
  * @see [ApplicationResponse.headers]
  */
 public abstract class ResponseHeaders {
@@ -19,6 +22,8 @@ public abstract class ResponseHeaders {
 
     /**
      * Checks whether a [name] response header is set.
+     *
+     * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.ResponseHeaders.contains)
      */
     public operator fun contains(name: String): Boolean = get(name) != null
 
@@ -75,6 +80,9 @@ public abstract class ResponseHeaders {
 
 /**
  * Appends a response header with the specified [name] and [value] if this is no header with [name] yet.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.response.appendIfAbsent)
+ *
  * @param safeOnly prevents from setting unsafe headers; `true` by default
  */
 public fun ResponseHeaders.appendIfAbsent(name: String, value: String, safeOnly: Boolean = true) {

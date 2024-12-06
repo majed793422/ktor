@@ -11,6 +11,9 @@ import kotlinx.io.*
 
 /**
  * A frame received or ready to be sent. It is not reusable and not thread-safe.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.Frame)
+ *
  * @property fin is it final fragment, should be always `true` for control frames and if no fragmentation is used
  * @property frameType enum value
  * @property data - a frame content or fragment content
@@ -138,6 +141,8 @@ public expect sealed class Frame private constructor(
 /**
  * Reads text content from the text frame.
  * Shouldn't be used for fragmented frames: such frames need to be reassembled first.
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.readText)
  */
 public fun Frame.Text.readText(): String {
     require(fin) { "Text could be only extracted from non-fragmented frame" }

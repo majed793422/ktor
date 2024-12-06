@@ -10,6 +10,9 @@ private val GMT_TIMEZONE = TimeZone.getTimeZone("GMT")
 
 /**
  * Create new gmt date from the [timestamp].
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.date.GMTDate)
+ *
  * @param timestamp is a number of epoch milliseconds (it is `now` by default).
  */
 @Suppress("FunctionName")

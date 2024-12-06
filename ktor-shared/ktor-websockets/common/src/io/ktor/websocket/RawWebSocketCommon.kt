@@ -18,6 +18,9 @@ import kotlin.random.*
 /**
  * Creates a RAW web socket session from connection.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.websocket.RawWebSocket)
+ *
  * @param input is a [ByteReadChannel] of connection
  * @param output is a [ByteWriteChannel] of connection
  * @param maxFrameSize is an initial [maxFrameSize] value for [WebSocketSession]

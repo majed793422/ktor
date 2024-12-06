@@ -9,6 +9,9 @@ import io.ktor.utils.io.*
 /**
  *  Server-sent event.
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.sse.ServerSentEvent)
+ *
  *  @property data data field of the event.
  *  @property event string identifying the type of event.
  *  @property id event ID.

@@ -10,6 +10,9 @@ import kotlin.reflect.*
 
 /**
  * Specifies a key for an attribute in [Attributes]
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.util.AttributeKey)
+ *
  * @param T is a type of the value stored in the attribute
  * @param name is a name of the attribute for diagnostic purposes. Can't be blank
  */

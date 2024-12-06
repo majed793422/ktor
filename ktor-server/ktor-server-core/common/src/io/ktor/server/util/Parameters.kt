@@ -24,6 +24,9 @@ import kotlin.reflect.*
  * }
  * ```
  *
+ *
+ * [Report a problem](https://ktor.io/feedback?fqname=io.ktor.server.util.getValue)
+ *
  * @throws MissingRequestParameterException if no values associated with name
  * @throws ParameterConversionException when conversion from String to [R] fails
  */
