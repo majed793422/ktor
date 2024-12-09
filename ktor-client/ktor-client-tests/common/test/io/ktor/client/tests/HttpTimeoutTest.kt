@@ -324,6 +324,8 @@ class HttpTimeoutTest : ClientLoader() {
     }
 
     // Js can't configure test timeout in browser
+    // Fix https://youtrack.jetbrains.com/issue/KTOR-7885
+    @Ignore
     @Test
     fun testRedirect() = clientTests(listOf("js"), retries = 5) {
         config {
@@ -436,7 +438,7 @@ class HttpTimeoutTest : ClientLoader() {
             assertFails {
                 try {
                     client.get("http://localhost:11").body<String>()
-                } catch (_: ConnectTimeoutException) {/* Ignore. */
+                } catch (_: ConnectTimeoutException) { /* Ignore. */
                 }
             }
         }
