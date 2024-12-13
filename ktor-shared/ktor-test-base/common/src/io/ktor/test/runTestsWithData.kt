@@ -60,7 +60,7 @@ fun <T> runTestsWithData(
     context: CoroutineContext = EmptyCoroutineContext,
     timeout: Duration = 1.minutes,
     retries: Int = 1,
-    catch: (TestFailure<T>) -> Unit,
+    catch: (TestFailure<T>) -> Unit = { throw it.cause },
     test: suspend TestScope.(TestCase<T>) -> Unit,
 ): TestResult {
     check(retries >= 0) { "Retries count shouldn't be negative but it is $retries" }
