@@ -4,9 +4,9 @@
 
 package io.ktor.server.test.base
 
-import io.ktor.junit.*
-import io.ktor.junit.coroutines.*
+import io.ktor.test.junit.coroutines.*
 import io.ktor.test.dispatcher.*
+import io.ktor.test.junit.*
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.test.TestResult

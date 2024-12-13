@@ -7,7 +7,7 @@ package io.ktor.tests.websocket
 import io.ktor.client.*
 import io.ktor.client.plugins.websocket.*
 import io.ktor.client.plugins.websocket.cio.*
-import io.ktor.junit.coroutines.*
+import io.ktor.test.junit.coroutines.*
 import io.ktor.serialization.*
 import io.ktor.server.application.*
 import io.ktor.server.testing.*

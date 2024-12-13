@@ -4,7 +4,7 @@
 
 package io.ktor.network.sockets.tests
 
-import io.ktor.junit.coroutines.*
+import io.ktor.test.junit.coroutines.*
 import io.ktor.network.selector.*
 import io.ktor.network.sockets.*
 import io.ktor.utils.io.*

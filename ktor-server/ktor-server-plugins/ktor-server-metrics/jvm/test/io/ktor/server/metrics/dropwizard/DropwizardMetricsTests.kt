@@ -8,7 +8,7 @@ import com.codahale.metrics.*
 import com.codahale.metrics.jvm.*
 import io.ktor.client.request.*
 import io.ktor.http.*
-import io.ktor.junit.*
+import io.ktor.test.junit.*
 import io.ktor.server.plugins.cors.routing.*
 import io.ktor.server.plugins.statuspages.*
 import io.ktor.server.response.*
